@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="649.0" prefWidth="1263.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LocationController">
+   <children>
+      <HBox layoutX="6.0" layoutY="14.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox>
+               <children>
+                  <TableView fx:id="LocationTab" prefHeight="582.0" prefWidth="751.0">
+                     <columns>
+                        <TableColumn fx:id="NumPieceCol" prefWidth="109.0" text="Numero de piece" />
+                        <TableColumn fx:id="NomCol" prefWidth="93.0" text="Nom" />
+                        <TableColumn fx:id="PnomCol" prefWidth="93.0" text="Prénom" />
+                        <TableColumn fx:id="MatCol" minWidth="5.0" prefWidth="94.0" text="Matricule" />
+                        <TableColumn fx:id="MarqueCol" minWidth="0.0" prefWidth="88.0" text="Marque" />
+                        <TableColumn fx:id="ModeleCol" minWidth="0.0" prefWidth="87.0" text="Modele" />
+                        <TableColumn fx:id="DateCol" minWidth="0.0" prefWidth="106.0" text="Date de Location" />
+                        <TableColumn fx:id="MonatntCol" minWidth="0.0" text="Montant" />
+                     </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox spacing="10.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="217.0" prefWidth="479.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label prefHeight="20.0" prefWidth="63.0" text="Véhicule">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <GridPane prefHeight="178.0" prefWidth="377.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="136.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="249.0" minWidth="10.0" prefWidth="241.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Matricule" />
+                              <Label text="Couleur" GridPane.rowIndex="1" />
+                              <TextField fx:id="couleurTfd" editable="false" prefHeight="25.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="Numero de Categorie" GridPane.rowIndex="2" />
+                              <TextField fx:id="numCatTfd" editable="false" prefHeight="25.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label text="Nombre de Cheveaux" GridPane.rowIndex="3" />
+                              <TextField fx:id="nbCheveauxTfd" editable="false" prefHeight="25.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="Marque" GridPane.rowIndex="4" />
+                              <TextField fx:id="marqueTfd" editable="false" prefHeight="25.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label text="Modele" GridPane.rowIndex="5" />
+                              <TextField fx:id="modeleTfd" editable="false" prefHeight="25.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField fx:id="matriculeTfd" prefHeight="25.0" prefWidth="167.0" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children>
+                     <padding>
+                        <Insets left="50.0" right="50.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="189.0" prefWidth="479.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label prefHeight="20.0" prefWidth="63.0" text="Locataire">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <GridPane prefHeight="151.0" prefWidth="377.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="136.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="249.0" minWidth="10.0" prefWidth="241.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Numero de piece" />
+                              <Label text="Nom" GridPane.rowIndex="1" />
+                              <TextField fx:id="nomTfd" prefHeight="25.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="Prenom" GridPane.rowIndex="2" />
+                              <TextField fx:id="pnomTfd" prefHeight="25.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label text="Téléphone" GridPane.rowIndex="3" />
+                              <TextField fx:id="telTfd" prefHeight="25.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="Date de Naissance" GridPane.rowIndex="4" />
+                              <TextField fx:id="dateNaissTfd" prefHeight="25.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField fx:id="numPieceTfd" prefHeight="25.0" prefWidth="167.0" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children>
+                     <padding>
+                        <Insets left="50.0" right="50.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="205.0" prefWidth="479.0" style="-fx-border-color: black;" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label prefHeight="20.0" prefWidth="63.0" text="Location">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <GridPane prefHeight="61.0" prefWidth="377.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="136.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="249.0" minWidth="10.0" prefWidth="241.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Date" />
+                              <Label text="Montant" GridPane.rowIndex="1" />
+                              <TextField fx:id="montantTfd" prefHeight="25.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="dateTfd" prefHeight="25.0" prefWidth="167.0" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="137.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="240.0" />
+                          </columnConstraints>
+                           <children>
+                              <Label text="Commentaire" GridPane.rowIndex="1" />
+                              <TextArea fx:id="commentaireTa" prefHeight="95.0" prefWidth="240.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           </children>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                           <rowConstraints>
+                              <RowConstraints />
+                              <RowConstraints />
+                           </rowConstraints>
+                        </GridPane>
+                     </children>
+                     <padding>
+                        <Insets left="50.0" right="50.0" />
+                     </padding>
+                  </VBox>
+                  <HBox alignment="CENTER" spacing="20.0">
+                     <children>
+                        <Button fx:id="NouveauBtn" mnemonicParsing="false" onAction="#newHandler" text="Nouveau" />
+                        <Button fx:id="EnregistrerBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#saveHandler" text="Enregistrer" />
+                        <Button fx:id="modifierBtn" layoutX="82.0" layoutY="10.0" mnemonicParsing="false" onAction="#updateHandler" text="Modifier" />
+                        <Button fx:id="supprimerBtn" layoutX="154.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteHandler" text="Supprimer" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>
